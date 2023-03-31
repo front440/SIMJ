@@ -11,8 +11,9 @@
 @stop
 
 @section('content')
-    <!-- Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
+
+
+    <div id="myModal1" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -136,9 +137,9 @@
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
     {{-- Si comentamos la linea de abajo funciona el boton de logout usuario --}}
-    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script> --}}
+    </script>
     <script>
         $.ajaxSetup({
             headers: {
@@ -160,7 +161,7 @@
                 selectable: true,
                 selectHelper: true,
                 select: function(start, end, allDays) {
-                    $('#myModal').modal('toggle');
+                    $('#myModal1').modal('toggle');
 
 
                     startDate = $.datepicker.formatDate("yy-mm-ddT00:00", start._d);
